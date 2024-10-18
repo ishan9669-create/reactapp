@@ -10,8 +10,8 @@ export default function Contact(){
     const[confirmation,setConfirmation] = useState('')
     return (
         <div>
-<div className="flex justify-center items-center mt-[200px]">
-            <div className="flex gap-4">
+<div className="flex justify-center items-center mt-[200px] ">
+            <div className=" flex flex-col gap-10  md:flex-row">
 
 
                 <div className="flex flex-col gap-4">
@@ -53,6 +53,8 @@ export default function Contact(){
                     className="hover:bg-blue-700 bg-blue-500 px-2 py-2 w-[100px] rounded-full text-white">Submit</button>
                     <span className="text-green-500">{confirmation + ''}</span>
                 </div>
+
+
                 <div className="flex justify-start flex-col   bg-blue-950 px-12 h-[400px] text-white -translate-y-14">
                     <h1 className="mt-11 text-3xl font-semibold">Contact Address</h1>
                     <div className="flex flex-col mt-5 items-center">
