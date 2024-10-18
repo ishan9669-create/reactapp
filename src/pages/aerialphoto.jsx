@@ -107,7 +107,7 @@ export default function Aerial(){
                     </p>
                 </div>
 
-                <div className="flex justify-evenly mx-48 mt-10">
+                <div className="flex-col flex md:flex-row  justify-evenly mx-48 mt-10">
                     <button
                     onClick={()=>{
                         setVirtual(true)
@@ -139,7 +139,7 @@ export default function Aerial(){
                 </div>
             </div>
 
-          {virtual==true ?  <Virtualtour/>:""} 
+          {virtual==true ?  <VirtualTour/>:""} 
           
           {aerial==true ?  <AerialPhoto/>:""}
           
@@ -159,130 +159,222 @@ const testimonials = [
     },
     
   ];
+// function DroneVideo(){
+//   return (
+//     <div className="bg-slate-100">
+//         <div className="flex justify-center text-3xl font-semibold mt-10" >
+//           <h1 className="mt-10">Aerial Cinematography</h1>
+//         </div>
+
+        
+//           <p className="mx-48 text-slate-500 mt-10">
+//           Our experienced drone pilots work with a range of professional drone systems such as DJI Phantom series, DJI Inspire, DJI Matrice with Canon and other professional cameras. Be it advertising, documentaries, feature films, corporate reels, or events – we get it right for you always!
+//           Our editors also help you redefine the videos with special effects, color corrections, voice overs and any information overlay
+//           </p>
+
+//           <div className="mt-12 mx-48 flex gap-[40px] justify-center ">
+//             <iframe src="https://www.youtube.com/embed/yK1c8qA_ivY" className="rounded-2xl"
+//             height={'300px'} width={'400px'}
+//             />
+//             <iframe src="https://www.youtube.com/embed/2jdNrXRpY2o" className="rounded-2xl"
+//             height={'300px'} width={'400px'}
+//             />
+//           </div>
+//           <div className="mt-10 mx-48 flex gap-[40px] justify-center ">
+//             <iframe src="https://youtube.com/embed/OlKiDGYt6UI" className="rounded-2xl"
+//             height={'300px'} width={'400px'}
+//             />
+//             <iframe src="https://www.youtube.com/embed/lC--KxBlBBQ" className="rounded-2xl"
+//             height={'300px'} width={'400px'}
+//             />
+//           </div>
+//           <div className="mt-10 mx-48 flex gap-[40px] justify-center ">
+//             <iframe src="https://www.youtube.com/embed/CVEZxmI24Ow" className="rounded-2xl"
+//             height={'300px'} width={'400px'}
+//             />
+//             <iframe src="https://www.youtube.com/embed/PqirVie0i9A" className="rounded-2xl"
+//             height={'300px'} width={'400px'}
+//             />
+//           </div>
+        
+//     </div>
+
+//   )
+// }
 function DroneVideo(){
   return (
-    <div className="bg-slate-100">
-        <div className="flex justify-center text-3xl font-semibold mt-10" >
-          <h1 className="mt-10">Aerial Cinematography</h1>
+    <div className="bg-slate-100 py-10">
+        <div className="flex justify-center text-2xl lg:text-3xl font-semibold mt-4 lg:mt-10" >
+          <h1>Aerial Cinematography</h1>
         </div>
 
-        
-          <p className="mx-48 text-slate-500 mt-10">
-          Our experienced drone pilots work with a range of professional drone systems such as DJI Phantom series, DJI Inspire, DJI Matrice with Canon and other professional cameras. Be it advertising, documentaries, feature films, corporate reels, or events – we get it right for you always!
-          Our editors also help you redefine the videos with special effects, color corrections, voice overs and any information overlay
-          </p>
+        <p className="mx-4 md:mx-16 lg:mx-48 text-slate-500 mt-6 lg:mt-10 text-center">
+          Our experienced drone pilots work with a range of professional drone systems such as DJI Phantom series, DJI Inspire, DJI Matrice with Canon and other professional cameras. Be it advertising, documentaries, feature films, corporate reels, or events – we get it right for you always! Our editors also help you redefine the videos with special effects, color corrections, voice overs, and any information overlay.
+        </p>
 
-          <div className="mt-12 mx-48 flex gap-[40px] justify-center ">
-            <iframe src="https://www.youtube.com/embed/yK1c8qA_ivY" className="rounded-2xl"
-            height={'300px'} width={'400px'}
-            />
-            <iframe src="https://www.youtube.com/embed/2jdNrXRpY2o" className="rounded-2xl"
-            height={'300px'} width={'400px'}
-            />
-          </div>
-          <div className="mt-10 mx-48 flex gap-[40px] justify-center ">
-            <iframe src="https://youtube.com/embed/OlKiDGYt6UI" className="rounded-2xl"
-            height={'300px'} width={'400px'}
-            />
-            <iframe src="https://www.youtube.com/embed/lC--KxBlBBQ" className="rounded-2xl"
-            height={'300px'} width={'400px'}
-            />
-          </div>
-          <div className="mt-10 mx-48 flex gap-[40px] justify-center ">
-            <iframe src="https://www.youtube.com/embed/CVEZxmI24Ow" className="rounded-2xl"
-            height={'300px'} width={'400px'}
-            />
-            <iframe src="https://www.youtube.com/embed/PqirVie0i9A" className="rounded-2xl"
-            height={'300px'} width={'400px'}
-            />
-          </div>
-        
+        <div className="mt-8 lg:mt-12 flex flex-wrap justify-center gap-4 lg:gap-8 mx-4 md:mx-16 lg:mx-48">
+          <iframe 
+            src="https://www.youtube.com/embed/yK1c8qA_ivY"
+            className="rounded-2xl"
+            height="200px"
+            width="100%"
+            style={{ maxWidth: "400px" }}
+          />
+          <iframe 
+            src="https://www.youtube.com/embed/2jdNrXRpY2o"
+            className="rounded-2xl"
+            height="200px"
+            width="100%"
+            style={{ maxWidth: "400px" }}
+          />
+        </div>
+
+        <div className="mt-8 flex flex-wrap justify-center gap-4 lg:gap-8 mx-4 md:mx-16 lg:mx-48">
+          <iframe 
+            src="https://youtube.com/embed/OlKiDGYt6UI"
+            className="rounded-2xl"
+            height="200px"
+            width="100%"
+            style={{ maxWidth: "400px" }}
+          />
+          <iframe 
+            src="https://www.youtube.com/embed/lC--KxBlBBQ"
+            className="rounded-2xl"
+            height="200px"
+            width="100%"
+            style={{ maxWidth: "400px" }}
+          />
+        </div>
+
+        <div className="mt-8 flex flex-wrap justify-center gap-4 lg:gap-8 mx-4 md:mx-16 lg:mx-48">
+          <iframe 
+            src="https://www.youtube.com/embed/CVEZxmI24Ow"
+            className="rounded-2xl"
+            height="200px"
+            width="100%"
+            style={{ maxWidth: "400px" }}
+          />
+          <iframe 
+            src="https://www.youtube.com/embed/PqirVie0i9A"
+            className="rounded-2xl"
+            height="200px"
+            width="100%"
+            style={{ maxWidth: "400px" }}
+          />
+        </div>
     </div>
-
   )
 }
- export function AerialPhoto(){
-    return (
-      <div className="mt-10 bg-slate-100">
- <div className="mt-4 mx-48 flex ">
-                <TestimonialsCarousel testimonials={testimonials}/>
 
-                <div className="flex  w-[500px] mt-10
-                 flex-col gap-5 justify-center items-center">
-                    <h1 className="font-semibold text-3xl">Drone Photography in India</h1>
-                    <p className="text-slate-500">Airpix helps you to capture breath-taking aerial photographs using a fleet of professional drone systems and experienced drone pilots. Our photographers understand your requriement to take photographs depending on end requirement such as real estate photography, industrial plant photography, resorts and for tourism promotion. We also have in-house experts to carry out the required post processing to edit the photographs
-
-                  
-                    </p>
-                    <p className="text-slate-500">  If you require any stock photographs from our inventory then, do contact us</p>
-                </div>
-            </div>
-      </div>
-     
-    )
-  }
-function Virtualtour(){
-  const [first,setFirst] = useState(false);
-  const [second,setSecond] = useState(false);
-  const [third,setThird] = useState(false);
-    return (
-        <div className="mt-10 bg-slate-100">
-            <div className="mt-4 mx-48 flex ">
-                <TestimonialsCarousel testimonials={testimonials}/>
-
-                <div className="flex  w-[500px]
-                 flex-col gap-5 justify-center items-center">
-                    <h1 className="font-semibold text-3xl">Virtual Reality aerial view</h1>
-                    <p className="text-slate-500">Using drone photography, we capture and integrate high resolution spherical panoramas with vital info-graphics to give the user an interactive and informative aerial tour around a location. These tours make it possible for a user to experience a location anytime anyplace on digital platforms like PCs, tablets or mobile phones. We take extreme care to configure the 360 virtual tour for the final application in order to present the location in the best possible way.</p>
-                </div>
-            </div>
-
-            <div className="flex justify-center text-3xl text-blue-900 font-semibold mt-8">
-                <h1>Aerial 360 tours</h1>
-            </div>
-
-            <div className="flex mx-48  mt-10 justify-evenly p-4 relative" >
-               <div
-                onMouseOver={()=>{
-                  setFirst(true)
-                }}
-                onMouseLeave={()=>{
-                  setFirst(false)
-                }}
-               className="w-[360px] h-[300px]  flex justify-center items-center  ">
-               <img 
-               
-               src="https://airpix.in/assets/virtual_tour/t01.jpg" className=" w-[370px] h-[90%] cursor-pointer" alt="" />
-               {first==true ? <h1 className="absolute bottom-[150px]  tracking-widest text-white text-2xl font-bold animate-textUp">BANGLORE VIRTUAL TOUR</h1>:""}
-               </div>
-
-               <div 
-               onMouseOver={()=>{
-                  setSecond(true)
-                }}
-                onMouseLeave={()=>{
-                  setSecond(false)
-                }}
-               className="w-[360px] h-[300px]  flex justify-center items-center">
-               <img src="https://airpix.in/assets/virtual_tour/t02.jpg" className="w-[370px]   h-[90%] cursor-pointer" alt="" />
-               {second==true ? <h1 className="absolute bottom-[150px] tracking-widest text-white text-2xl font-bold animate-textUp">POWAI VIRTUAL TOUR</h1>:""}
-               </div>
-
-
-               <div 
-               onMouseOver={()=>{
-                setThird(true)
-              }}
-              onMouseLeave={()=>{
-                setThird(false)
-              }}
-               className="w-[360px] h-[300px]  flex justify-center items-center">
-               <img src="https://airpix.in/assets/virtual_tour/t04.jpg" className="w-[370px]  h-[90%] cursor-pointer" alt="" />
-               {third==true ? <h1 className="absolute bottom-[150px] tracking-widest text-white text-2xl font-bold animate-textUp">DADAR VIRTUAL TOUR</h1>:""}
-               </div>
-            </div>
-
-           
+export function AerialPhoto() {
+  return (
+    <div className="mt-10 bg-slate-100 py-10">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 lg:mx-48 mx-4">
+        {/* Carousel Section */}
+        <div className="w-full lg:w-1/2">
+          <TestimonialsCarousel testimonials={testimonials} />
         </div>
-    )
+
+        {/* Text Content Section */}
+        <div className="flex w-full lg:w-1/2 flex-col gap-5 justify-center items-center">
+          <h1 className="font-semibold text-2xl lg:text-3xl text-center lg:text-left">
+            Drone Photography in India
+          </h1>
+          <p className="text-slate-500 text-center lg:text-left">
+            Airpix helps you capture breathtaking aerial photographs using a fleet of professional drone systems and experienced drone pilots. Our photographers understand your requirements to take photographs depending on the end requirement such as real estate photography, industrial plant photography, resorts, and for tourism promotion. We also have in-house experts to carry out the required post-processing to edit the photographs.
+          </p>
+          <p className="text-slate-500 text-center lg:text-left">
+            If you require any stock photographs from our inventory, do contact us.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function VirtualTour() {
+  const [first, setFirst] = useState(false);
+  const [second, setSecond] = useState(false);
+  const [third, setThird] = useState(false);
+
+  return (
+    <div className="mt-10 bg-slate-100">
+      {/* Section with Testimonials and Text */}
+      <div className="flex flex-col lg:flex-row mt-4 lg:mx-48 mx-4 gap-8">
+        <div className="lg:w-1/2 w-full">
+          <TestimonialsCarousel testimonials={testimonials} />
+        </div>
+        <div className="flex w-full lg:w-1/2 flex-col gap-5 justify-center items-center">
+          <h1 className="font-semibold text-2xl lg:text-3xl text-center lg:text-left">
+            Virtual Reality Aerial View
+          </h1>
+          <p className="text-slate-500 text-center lg:text-left px-4 lg:px-0">
+            Using drone photography, we capture and integrate high-resolution spherical panoramas with vital infographics to give the user an interactive and informative aerial tour around a location. These tours make it possible for a user to experience a location anytime, anyplace on digital platforms like PCs, tablets, or mobile phones. We take extreme care to configure the 360 virtual tour for the final application in order to present the location in the best possible way.
+          </p>
+        </div>
+      </div>
+
+      {/* Aerial 360 Tours Heading */}
+      <div className="flex justify-center text-2xl lg:text-3xl text-blue-900 font-semibold mt-8">
+        <h1>Aerial 360 Tours</h1>
+      </div>
+
+      {/* Image Grid Section */}
+      <div className="flex flex-col md:flex-row mx-4 lg:mx-48 mt-10 justify-evenly gap-8 p-4">
+        {/* First Image */}
+        <div
+          onMouseOver={() => setFirst(true)}
+          onMouseLeave={() => setFirst(false)}
+          className="relative w-full md:w-[360px] h-[250px] lg:h-[300px] flex justify-center items-center"
+        >
+          <img
+            src="https://airpix.in/assets/virtual_tour/t01.jpg"
+            className="w-full h-full object-cover rounded cursor-pointer"
+            alt="Bangalore Virtual Tour"
+          />
+          {first && (
+            <h1 className="absolute bottom-[100px] lg:bottom-[150px] tracking-widest text-white text-xl lg:text-2xl font-bold animate-textUp">
+              BANGALORE VIRTUAL TOUR
+            </h1>
+          )}
+        </div>
+
+        {/* Second Image */}
+        <div
+          onMouseOver={() => setSecond(true)}
+          onMouseLeave={() => setSecond(false)}
+          className="relative w-full md:w-[360px] h-[250px] lg:h-[300px] flex justify-center items-center"
+        >
+          <img
+            src="https://airpix.in/assets/virtual_tour/t02.jpg"
+            className="w-full h-full object-cover rounded cursor-pointer"
+            alt="Powai Virtual Tour"
+          />
+          {second && (
+            <h1 className="absolute bottom-[100px] lg:bottom-[150px] tracking-widest text-white text-xl lg:text-2xl font-bold animate-textUp">
+              POWAI VIRTUAL TOUR
+            </h1>
+          )}
+        </div>
+
+        {/* Third Image */}
+        <div
+          onMouseOver={() => setThird(true)}
+          onMouseLeave={() => setThird(false)}
+          className="relative w-full md:w-[360px] h-[250px] lg:h-[300px] flex justify-center items-center"
+        >
+          <img
+            src="https://airpix.in/assets/virtual_tour/t04.jpg"
+            className="w-full h-full object-cover rounded cursor-pointer"
+            alt="Dadar Virtual Tour"
+          />
+          {third && (
+            <h1 className="absolute bottom-[100px] lg:bottom-[150px] tracking-widest text-white text-xl lg:text-2xl font-bold animate-textUp">
+              DADAR VIRTUAL TOUR
+            </h1>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 }
