@@ -70,8 +70,8 @@ export default function Utility(){
            </p>
 
             
-            <div className="mx-48 mt-10 flex border-2 justify-between items-center">
-                <div className={`p-3  w-[33%] flex justify-center border-r-2 cursor-pointer ${tower==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}
+            <div className="mx-48 mt-10 flex-col flex md:flex-row border-2 justify-between items-center">
+                <div className={`p-3  md:w-[33%] w-[100%] flex justify-center md:border-r-2 cursor-pointer ${tower==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}
 
                 
                 onClick={(e)=>{
@@ -89,7 +89,7 @@ export default function Utility(){
                     setTurbine(true);
                     setGas(false);
                  }}
-                className={`p-3  w-[33%] flex justify-center border-r-2 cursor-pointer ${turbine==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}>WIND TURBINE</div>
+                className={`p-3  md:w-[33%] w-[100%] flex justify-center md:border-r-2 cursor-pointer ${turbine==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}>WIND TURBINE</div>
                 <div 
                  onClick={(e)=>{
                 
@@ -97,12 +97,12 @@ export default function Utility(){
                     setTurbine(false);
                     setGas(true);
                  }}
-                className={`p-3  w-[34%] flex justify-center cursor-pointer ${gas==false ? 'border-b-0':'border-b-2 border-b-red-700'}` }>OIL & GAS INSPECTION</div>
+                className={`p-3 md:w-[34%] w-[100%] flex justify-center cursor-pointer ${gas==false ? 'border-b-0':'border-b-2 border-b-red-700'}` }>OIL & GAS INSPECTION</div>
             </div>
 
-            <div className="flex gap-28 justify-between mt-10 mx-48">
+            <div className="flex-col flex md:flex-row md:gap-28 gap-10 justify-between mt-10 md:mx-48">
                <img src={tower? TOWER[0].image : '' || turbine ? TURBINE[0].image:'' || gas ? GAS[0].image : '' }
-               className="rounded-xl h-80 w-[480px]"
+               className="rounded-xl h-80 md:w-[480px] w-[100%]"
                />
 
                <div className="flex flex-col   gap-11 justify-center">
@@ -113,7 +113,7 @@ export default function Utility(){
                </div>
             </div>
 
-            <div className="flex gap-28 justify-between mt-10 mx-48">
+            <div className="flex-col flex md:flex-row md:gap-28 gap-10 justify-between mt-10 md:mx-48">
             <div className="flex flex-col   gap-11 justify-center">
                 <h1 className="font-bold font-serif text-3xl">{tower? TOWER[1].heading : '' || turbine ? TURBINE[1].heading:'' || gas ? GAS[1].heading : '' }</h1>
                 <p
@@ -122,14 +122,14 @@ export default function Utility(){
                </div>
 
                <img src={tower? TOWER[1].image : '' || turbine ? TURBINE[1].image:'' || gas ? GAS[1].image : '' }  
-               className="rounded-xl h-80 w-[480px]"
+               className="rounded-xl h-80 md:w-[480px] w-[100%]"
                />
 
               
             </div>
-            <div className="flex gap-28 justify-between mt-10 mx-48">
+            <div className="flex-col flex md:flex-row md:gap-28 gap-10 justify-between mt-10 md:mx-48">
             <img src={tower? TOWER[2].image : '' || turbine ? TURBINE[2].image:'' || gas ? GAS[2].image : '' }  
-               className="rounded-xl h-80 w-[480px]"
+               className="rounded-xl h-80 md:w-[480px] w-[100%]"
                />
 
             <div className="flex flex-col   gap-11 justify-center">
@@ -149,7 +149,7 @@ export default function Utility(){
                 <h1>What we offer</h1>
             </div>
 
-            <div className="flex justify-between mt-10 mx-48 translate-x-10
+            <div className="flex-col flex md:flex-row justify-between mt-10 mx-48 translate-x-10
              items-center " >
                 <div className="flex flex-col items-center  gap-3">
                 <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-09-256.png" 
