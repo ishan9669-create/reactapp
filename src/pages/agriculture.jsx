@@ -51,8 +51,8 @@ export default function Agriculture(){
            </p>
 
             
-            <div className="mx-48 mt-10 flex border-2 justify-between items-center">
-                <div className={`p-3  w-[50%] flex justify-center border-r-2 cursor-pointer ${agri==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}
+            <div className="mx-48 mt-10 flex-col flex md:flex-row border-2 justify-between items-center">
+                <div className={`p-3  md:w-[50%] w-[100%] flex justify-center md:border-r-2 cursor-pointer ${agri==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}
 
                 
                 onClick={(e)=>{
@@ -69,13 +69,13 @@ export default function Agriculture(){
                     setCanal(true);
                     
                  }}
-                className={`p-3  w-[50%] flex justify-center border-r-2 cursor-pointer ${canal==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}>CANAL MAPPING</div>
+                className={`p-3  md:w-[50%] w-[100%] flex justify-center md:border-r-2 cursor-pointer ${canal==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}>CANAL MAPPING</div>
                 
             </div>
 
-            <div className="flex gap-28 justify-between mt-10 mx-48">
+            <div className="flex-col flex md:flex-row md:gap-28 gap-10 justify-between mt-10 md:mx-48">
                <img src={agri? AGRI[0].image : '' || canal ? CANAL[0].image:''  }
-               className="rounded-xl h-80 w-[480px]"
+               className="rounded-xl h-80 md:w-[480px] w-[100%]"
                />
 
                <div className="flex flex-col   gap-11 justify-center">
@@ -86,7 +86,7 @@ export default function Agriculture(){
                </div>
             </div>
 
-            <div className="flex gap-28 justify-between mt-10 mx-48">
+            <div className="flex-col flex md:flex-row md:gap-28 gap-10 justify-between mt-10 md:mx-48">
             <div className="flex flex-col   gap-11 justify-center">
                 <h1 className="font-bold font-serif text-3xl">{agri? AGRI[1].heading : '' || canal ? CANAL[1].heading:'' }</h1>
                 <p
@@ -95,14 +95,14 @@ export default function Agriculture(){
                </div>
 
                <img src={agri? AGRI[1].image : '' || canal ? CANAL[1].image:''  } 
-               className="rounded-xl h-80 w-[480px]"
+               className="rounded-xl h-80 md:w-[480px] w-[100%]"
                />
 
               
             </div>
-            <div className="flex gap-28 justify-between mt-10 mx-48">
+            <div className="flex-col flex md:flex-row md:gap-28 gap-10 justify-between mt-10 md:mx-48">
             <img src={agri? AGRI[2].image : '' || canal ? CANAL[2].image:''  } 
-               className="rounded-xl h-80 w-[480px]"
+               className="rounded-xl h-80 md:w-[480px] w-[100%]"
                />
 
             <div className="flex flex-col   gap-11 justify-center">
@@ -122,11 +122,11 @@ export default function Agriculture(){
                 <h1>What we offer</h1>
             </div>
 
-            <div className="flex justify-between mt-10 mx-48 translate-x-10
+            <div className="flex-col flex md:flex-row justify-between mt-10 mx-48 translate-x-10
              items-center " >
                 <div className="flex flex-col items-center  gap-3">
                 <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-09-256.png" 
-                className="h-[150px]"
+                className="h-[510px]"
                 />
                 <span>2cm Resolution Data</span>
                 </div>
