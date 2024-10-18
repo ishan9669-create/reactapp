@@ -363,7 +363,7 @@ export default function Worksyte() {
         <Topbar />
       </div>
 
-      <div id="effort" className="flex flex-col md:flex-row justify-center items-center gap-10 p-4">
+      <div id="effort" className="flex flex-col md:flex-row justify-center md:mx-48 items-center gap-10 p-4">
   <div className="flex flex-col gap-5 md:w-1/2">
     <h1 className="text-4xl font-semibold -translate-x-6 text-center md:text-left">Effortlessly Tag and Track</h1>
     <div className="flex flex-col gap-3 text-xl font-bold text-gray-500">
@@ -378,13 +378,13 @@ export default function Worksyte() {
     <img src="https://airpix.in/worksyte/img/Belmondo.jpg" className="w-full h-full object-cover" />
   </div>
 
-
+ </div>
 
 
         {/*  */}
         <div 
   id="share"
-  className="flex flex-col md:flex-row h-auto justify-center items-center gap-10 animate-movefirst mt-10 bg-slate-100 p-4"
+  className="flex flex-col md:flex-row h-auto justify-center items-center md:mx-48 gap-10 animate-movefirst mt-10 bg-slate-100 p-4"
 >
   <div className="w-full md:w-1/2 h-[300px] flex justify-center">
     <img src="https://airpix.in/worksyte/img/share.jpg" className="w-full h-full object-cover" />
@@ -406,7 +406,7 @@ export default function Worksyte() {
                         {/*  */}
                         <div 
   id="locate"
-  className="flex flex-col md:flex-row h-auto justify-center items-center gap-10 animate-movefirst p-4"
+  className="flex flex-col md:flex-row h-auto justify-center md:mx-48 mt-10 items-center gap-10 animate-movefirst p-4"
 >
   <div className="flex flex-col gap-5 p-4 max-w-[500px] w-full">
     <h1 className="text-4xl font-semibold text-center md:text-left">Locate Stuff Interactively</h1>
@@ -426,7 +426,7 @@ export default function Worksyte() {
                
                 
 
-      </div>
+      
       
 
       {/* Lower Industries Part */}
