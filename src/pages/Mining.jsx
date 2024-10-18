@@ -70,8 +70,8 @@ export default function Mining(){
            </p>
 
             
-            <div className="mx-48 mt-10 flex border-2 justify-between items-center">
-                <div className={`p-3  w-[33%] flex justify-center border-r-2 cursor-pointer ${urban==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}
+            <div className="mx-48 mt-10 flex flex-col md:flex-row border-2 justify-between items-center">
+                <div className={`p-3 md:w-[33%] w-[100%] flex justify-center  md:border-r-2 cursor-pointer ${urban==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}
 
                 
                 onClick={(e)=>{
@@ -89,7 +89,7 @@ export default function Mining(){
                     setTransport(true);
                     setMining(false);
                  }}
-                className={`p-3  w-[33%] flex justify-center border-r-2 cursor-pointer ${transport==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}>TRANSPORT</div>
+                className={`p-3   flex justify-center md:w-[33%] w-[100%] md:border-r-2 cursor-pointer ${transport==false ? 'border-b-0':'border-b-2 border-b-red-700 '}`}>TRANSPORT</div>
                 <div 
                  onClick={(e)=>{
                 
@@ -97,12 +97,12 @@ export default function Mining(){
                     setTransport(false);
                     setMining(true);
                  }}
-                className={`p-3  w-[34%] flex justify-center cursor-pointer ${mine==false ? 'border-b-0':'border-b-2 border-b-red-700'}` }>MINING</div>
+                className={`p-3 md:w-[34%] w-[100%] flex justify-center cursor-pointer ${mine==false ? 'border-b-0':'border-b-2 border-b-red-700'}` }>MINING</div>
             </div>
 
-            <div className="flex gap-28 justify-between mt-10 mx-48">
+            <div className="flex flex-col md:flex-row  md:gap-28 gap-10 justify-between mt-10 md:mx-48  ">
                <img src={urban? UrbanDev[0].image : '' || transport ? Transport[0].image:'' || mine ? mining[0].image : '' }
-               className="rounded-xl h-80 w-[480px]"
+               className="rounded-xl h-80 md:w-[480px] w-[100%] "
                />
 
                <div className="flex flex-col   gap-11 justify-center">
@@ -113,7 +113,7 @@ export default function Mining(){
                </div>
             </div>
 
-            <div className="flex gap-28 justify-between mt-10 mx-48">
+            <div className="flex-col flex md:flex-row md:gap-28 gap-10 justify-between mt-10 md:mx-48 ">
             <div className="flex flex-col   gap-11 justify-center">
                 <h1 className="font-bold font-serif text-3xl">{urban? UrbanDev[1].heading : '' || transport ? Transport[1].heading:'' || mine ? mining[1].heading : '' }</h1>
                 <p
@@ -122,14 +122,14 @@ export default function Mining(){
                </div>
 
                <img src={urban? UrbanDev[1].image : '' || transport ? Transport[1].image:'' || mine ? mining[1].image : '' }  
-               className="rounded-xl h-80 w-[480px]"
+               className="rounded-xl h-80 md:w-[480px] w-[100%] "
                />
 
               
             </div>
-            <div className="flex gap-28 justify-between mt-10 mx-48">
+            <div className="flex-col flex md:flex-row md:gap-28 gap-10 justify-between mt-10 md:mx-48">
             <img src={urban? UrbanDev[2].image : '' || transport ? Transport[2].image:'' || mine ? mining[2].image : '' }  
-               className="rounded-xl h-80 w-[480px]"
+               className="rounded-xl h-80 md:w-[480px] w-[100%]"
                />
 
             <div className="flex flex-col   gap-11 justify-center">
@@ -145,13 +145,13 @@ export default function Mining(){
             </div>
 
             
-            <div className="flex justify-center font-semibold text-2xl mt-12">
+            <div className="flex justify-center flex-col items-center font-semibold text-2xl mt-12">
                 <h1>What we offer</h1>
             </div>
 
-            <div className="flex justify-between mt-10 mx-48 translate-x-10
+            <div className="flex-col flex md:flex-row justify-between mt-10 mx-48 translate-x-10
              items-center " >
-                <div className="flex flex-col items-center  gap-3">
+                <div className=" flex  flex-col items-center  gap-3">
                 <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-09-256.png" 
                 className="h-[150px]"
                 />
